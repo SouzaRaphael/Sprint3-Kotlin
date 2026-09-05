@@ -7,20 +7,20 @@ Humano (BLHs).
 
 ## 1. Identificação
 
-| | |
-|---|---|
-| **Projeto** | Lactare |
-| **Equipe** | `Lactare Hub` |
-| **Repositório** | |
+| |                 |
+|---|-----------------|
+| **Projeto** | Lactare         |
+| **Equipe** | `Lactare Hub`   |
+| **Repositório** | [Repositório](https://github.com/SouzaRaphael/Sprint3-Kotlin) |
 
 ### Integrantes
 
 | Nome completo | RM |
 |---|---|
-| | |
-| | |
-| | |
-| | |
+| `David dos Santos Lima` | `555441` |
+| `Enzo Francisco Luchini` | `557710` |
+| `Matheus Amaral de Camargo Cardoso Lima` | `557686` |
+| `Raphael Costa Souza` | `559024` |
 
 ---
 
