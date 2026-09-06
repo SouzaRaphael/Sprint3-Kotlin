@@ -11,7 +11,6 @@ import br.com.lactarehub.domain.entity.Testimonial
 import br.com.lactarehub.domain.entity.TestimonialType
 import kotlinx.coroutines.launch
 
-/** Estado do formulário de publicação de depoimento. */
 class WriteTestimonialViewModel : ViewModel() {
 
     var donor by mutableStateOf<Donor?>(null)
@@ -38,7 +37,6 @@ class WriteTestimonialViewModel : ViewModel() {
         type = value
     }
 
-    /** Publica o depoimento escrito pela doadora. */
     fun submit(onPublished: () -> Unit) {
         val currentDonor = donor ?: return
 

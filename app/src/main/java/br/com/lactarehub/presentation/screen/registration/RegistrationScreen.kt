@@ -27,7 +27,6 @@ import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.viewmodel.RegistrationStep
 import br.com.lactarehub.presentation.viewmodel.RegistrationViewModel
 
-/** Tela 03 do protótipo — cadastro da doadora em quatro etapas. */
 @Composable
 fun RegistrationScreen(
     onCompleted: () -> Unit,
@@ -45,7 +44,6 @@ fun RegistrationScreen(
     ) {
         AppTopBar(
             title = "Cadastro",
-            // Voltar recua uma etapa; na primeira, sai do cadastro.
             onBack = { if (viewModel.isFirstStep) goBack() else viewModel.goToPreviousStep() },
         )
 

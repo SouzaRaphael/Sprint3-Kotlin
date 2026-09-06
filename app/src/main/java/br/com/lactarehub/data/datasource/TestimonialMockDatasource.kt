@@ -3,12 +3,6 @@ package br.com.lactarehub.data.datasource
 import br.com.lactarehub.domain.entity.Testimonial
 import br.com.lactarehub.domain.entity.TestimonialType
 
-/**
- * Depoimentos das doadoras da rede.
- *
- * A lista é mutável porque a tela "Escrever depoimento" acrescenta itens
- * durante a sessão — não há persistência nesta Sprint.
- */
 object TestimonialMockDatasource {
 
     val items: MutableList<Testimonial> = mutableListOf(

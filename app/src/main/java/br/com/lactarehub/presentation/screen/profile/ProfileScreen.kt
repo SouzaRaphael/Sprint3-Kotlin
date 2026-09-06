@@ -44,12 +44,6 @@ import br.com.lactarehub.presentation.component.StatTile
 import br.com.lactarehub.presentation.component.StatusBadge
 import br.com.lactarehub.presentation.viewmodel.ProfileViewModel
 
-/**
- * Perfil da doadora: dados do cadastro e a coleta agendada no momento.
- *
- * Carrega os dados ao abrir, então sempre reflete o último agendamento —
- * inclusive um acabado de registrar ou alterar.
- */
 @Composable
 fun ProfileScreen(
     goBack: () -> Unit,
@@ -171,7 +165,6 @@ fun ProfileScreen(
     }
 }
 
-/** Card da coleta marcada, ou o convite para marcar a primeira. */
 @Composable
 private fun NextCollectionSection(schedule: CollectionSchedule?, onSchedule: () -> Unit) {
     if (schedule == null) {
@@ -230,7 +223,6 @@ private fun NextCollectionSection(schedule: CollectionSchedule?, onSchedule: () 
     }
 }
 
-/** Avatar, nome e situação da jornada. */
 @Composable
 private fun ProfileHeader(donor: Donor) {
     Column(
@@ -264,7 +256,6 @@ private fun ProfileHeader(donor: Donor) {
     }
 }
 
-/** Card branco com título, selo opcional e uma sequência de [InfoRow]. */
 @Composable
 private fun ProfileCard(
     title: String,
@@ -294,7 +285,6 @@ private fun ProfileCard(
     }
 }
 
-/** Números da jornada, no mesmo formato do card de impacto da home. */
 @Composable
 private fun JourneySummary(donor: Donor) {
     Row(

@@ -3,12 +3,6 @@ package br.com.lactarehub.data.datasource
 import br.com.lactarehub.domain.entity.CollectionPoint
 import br.com.lactarehub.domain.entity.CollectionPointType
 
-/**
- * Pontos da rede exibidos no mapa da aba "Pontos".
- *
- * Instituições reais da Rede Brasileira de Bancos de Leite Humano, com
- * distâncias e horários simulados para esta Sprint.
- */
 object CollectionPointMockDatasource {
 
     val items: List<CollectionPoint> = listOf(

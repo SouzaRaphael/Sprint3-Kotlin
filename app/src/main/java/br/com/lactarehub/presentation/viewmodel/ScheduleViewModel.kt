@@ -14,7 +14,6 @@ import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.LocalDateTime
 
-/** Estado do formulário de agendamento de coleta. */
 class ScheduleViewModel : ViewModel() {
 
     var current by mutableStateOf<CollectionSchedule?>(null)
@@ -26,10 +25,6 @@ class ScheduleViewModel : ViewModel() {
     var availableWindows by mutableStateOf<List<String>>(emptyList())
         private set
 
-    /**
-     * "Hoje" do protótipo. Vem do caso de uso, e não da coleta atual, porque
-     * quem acabou de se cadastrar ainda não tem coleta marcada.
-     */
     private var referenceToday: LocalDate = LocalDate.now()
 
     var mode by mutableStateOf(CollectionMode.DOMICILIAR)
@@ -48,13 +43,11 @@ class ScheduleViewModel : ViewModel() {
     var isSubmitting by mutableStateOf(false)
         private set
 
-    /** A coleta domiciliar usa o bairro cadastrado; as demais exigem um ponto. */
     val requiresPoint: Boolean get() = mode != CollectionMode.DOMICILIAR
 
     val canSubmit: Boolean
         get() = date != null && timeWindow != null && (!requiresPoint || selectedPoint != null)
 
-    /** Datas oferecidas: os próximos catorze dias a partir da referência. */
     val selectableDates: List<LocalDate>
         get() = (1..14).map { referenceToday.plusDays(it.toLong()) }
 
@@ -96,7 +89,6 @@ class ScheduleViewModel : ViewModel() {
         notes = value
     }
 
-    /** Grava o novo agendamento e entrega a coleta criada a [onScheduled]. */
     fun submit(onScheduled: (CollectionSchedule) -> Unit) {
         val selectedDate = date
         val window = timeWindow

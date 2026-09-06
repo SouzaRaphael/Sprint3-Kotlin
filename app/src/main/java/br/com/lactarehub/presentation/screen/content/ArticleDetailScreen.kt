@@ -35,7 +35,6 @@ import br.com.lactarehub.presentation.component.LoadingBox
 import br.com.lactarehub.presentation.component.LocalAppFeedback
 import br.com.lactarehub.presentation.component.StatusBadge
 
-/** Leitura de um artigo. */
 @Composable
 fun ArticleDetailScreen(
     articleId: String,

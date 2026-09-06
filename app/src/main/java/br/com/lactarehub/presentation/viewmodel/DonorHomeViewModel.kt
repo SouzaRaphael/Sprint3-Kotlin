@@ -12,17 +12,14 @@ import br.com.lactarehub.domain.entity.Donation
 import br.com.lactarehub.domain.entity.Donor
 import kotlinx.coroutines.launch
 
-/** Estado da home da doadora. */
 class DonorHomeViewModel : ViewModel() {
 
     var donor by mutableStateOf<Donor?>(null)
         private set
 
-    /** Nula quando não há coleta marcada. */
     var schedule by mutableStateOf<CollectionSchedule?>(null)
         private set
 
-    /** Nula enquanto a pessoa não tiver nenhuma doação em trânsito. */
     var currentDonation by mutableStateOf<Donation?>(null)
         private set
 
@@ -37,7 +34,6 @@ class DonorHomeViewModel : ViewModel() {
         load()
     }
 
-    /** Primeira carga: mostra o indicador enquanto busca. */
     fun load() {
         viewModelScope.launch {
             isLoading = true
@@ -46,13 +42,6 @@ class DonorHomeViewModel : ViewModel() {
         }
     }
 
-    /**
-     * Revalidação silenciosa, usada quando a aba volta a ficar visível.
-     *
-     * Mantém o conteúdo atual na tela em vez de piscar um indicador a cada
-     * troca de aba — e é o que faz uma coleta agendada em outra aba aparecer
-     * aqui imediatamente.
-     */
     fun refresh() {
         viewModelScope.launch { fetch() }
     }
@@ -64,7 +53,6 @@ class DonorHomeViewModel : ViewModel() {
         featuredArticles = ServiceLocator.listFeaturedArticles()
     }
 
-    /** Confirma a coleta agendada e devolve o estado atualizado. */
     fun confirmCollection(onConfirmed: () -> Unit) {
         if (schedule == null) return
 

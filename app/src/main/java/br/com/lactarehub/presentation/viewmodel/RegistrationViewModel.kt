@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 import java.time.format.DateTimeFormatter
 import java.time.format.ResolverStyle
 
-/** Etapas do cadastro, na ordem em que aparecem na barra de progresso. */
 enum class RegistrationStep(val title: String, val subtitle: String) {
     SOBRE_VOCE(
         title = "Sobre você",
@@ -32,7 +31,6 @@ enum class RegistrationStep(val title: String, val subtitle: String) {
     ),
 }
 
-/** Nomes dos campos validados, usados como chave das mensagens de erro. */
 object RegistrationField {
     const val FULL_NAME = "fullName"
     const val EMAIL = "email"
@@ -48,13 +46,6 @@ object RegistrationField {
     const val MEDICATION = "medicationNotes"
 }
 
-/**
- * Estado do formulário de cadastro em quatro etapas.
- *
- * O rascunho fica no ViewModel, e não nos campos da tela: é o que faz os
- * valores sobreviverem ao ir e voltar entre as quatro etapas, papel que no
- * projeto Flutter cabia à classe `RegistrationFields`.
- */
 class RegistrationViewModel : ViewModel() {
 
     var step by mutableStateOf(RegistrationStep.SOBRE_VOCE)
@@ -86,10 +77,6 @@ class RegistrationViewModel : ViewModel() {
         step = RegistrationStep.entries[step.ordinal - 1]
     }
 
-    /**
-     * Valida a etapa atual e avança. Devolve `true` quando a última etapa foi
-     * validada e o cadastro pode ser enviado.
-     */
     fun validateAndAdvance(): Boolean {
         if (!validateCurrentStep()) return false
         if (!isLastStep) {
@@ -157,12 +144,10 @@ class RegistrationViewModel : ViewModel() {
         return errors.isEmpty()
     }
 
-    /** Envia o cadastro. Chama [onCompleted] quando concluído. */
     fun submit(onCompleted: () -> Unit) {
         viewModelScope.launch {
             isSubmitting = true
             try {
-                // A UF é normalizada aqui, como o `applyTo` do Flutter fazia.
                 draft = draft.copy(state = draft.state.trim().uppercase())
                 ServiceLocator.registerDonor(draft)
                 onCompleted()

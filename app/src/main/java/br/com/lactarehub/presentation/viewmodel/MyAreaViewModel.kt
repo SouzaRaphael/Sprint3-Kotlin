@@ -13,17 +13,14 @@ import br.com.lactarehub.domain.entity.Donation
 import br.com.lactarehub.domain.entity.Donor
 import kotlinx.coroutines.launch
 
-/** Estado da área da doadora. */
 class MyAreaViewModel : ViewModel() {
 
     var donor by mutableStateOf<Donor?>(null)
         private set
 
-    /** Nula quando não há coleta marcada. */
     var schedule by mutableStateOf<CollectionSchedule?>(null)
         private set
 
-    /** Nula enquanto a pessoa não tiver nenhuma doação a rastrear. */
     var currentDonation by mutableStateOf<Donation?>(null)
         private set
 
@@ -38,7 +35,6 @@ class MyAreaViewModel : ViewModel() {
         load()
     }
 
-    /** Primeira carga: mostra o indicador enquanto busca. */
     fun load() {
         viewModelScope.launch {
             isLoading = true
@@ -47,7 +43,6 @@ class MyAreaViewModel : ViewModel() {
         }
     }
 
-    /** Revalidação silenciosa, usada quando a aba volta a ficar visível. */
     fun refresh() {
         viewModelScope.launch { fetch() }
     }

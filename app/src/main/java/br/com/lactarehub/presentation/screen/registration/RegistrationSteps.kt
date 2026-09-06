@@ -41,7 +41,6 @@ import br.com.lactarehub.presentation.component.AppTextField
 import br.com.lactarehub.presentation.viewmodel.RegistrationField
 import br.com.lactarehub.presentation.viewmodel.RegistrationViewModel
 
-/** Barra segmentada do topo do cadastro, com o texto "Etapa X de Y". */
 @Composable
 fun RegistrationProgress(currentStep: Int, totalSteps: Int, modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
@@ -75,7 +74,6 @@ fun RegistrationProgress(currentStep: Int, totalSteps: Int, modifier: Modifier =
     }
 }
 
-/** Etapa 1 — dados pessoais, fiel à captura do protótipo. */
 @Composable
 fun StepAboutYou(viewModel: RegistrationViewModel, modifier: Modifier = Modifier) {
     val draft = viewModel.draft
@@ -135,7 +133,6 @@ fun StepAboutYou(viewModel: RegistrationViewModel, modifier: Modifier = Modifier
     }
 }
 
-/** Etapa 2 — endereço, que define o BLH mais próximo. */
 @Composable
 fun StepAddress(viewModel: RegistrationViewModel, modifier: Modifier = Modifier) {
     val draft = viewModel.draft
@@ -221,7 +218,6 @@ fun StepAddress(viewModel: RegistrationViewModel, modifier: Modifier = Modifier)
     }
 }
 
-/** Etapa 3 — triagem de saúde. */
 @Composable
 fun StepHealth(viewModel: RegistrationViewModel, modifier: Modifier = Modifier) {
     val draft = viewModel.draft
@@ -269,7 +265,6 @@ fun StepHealth(viewModel: RegistrationViewModel, modifier: Modifier = Modifier) 
     }
 }
 
-/** Linha com título, descrição e interruptor. */
 @Composable
 private fun ToggleRow(
     title: String,
@@ -306,7 +301,6 @@ private fun ToggleRow(
     }
 }
 
-/** Etapa 4 — revisão dos dados e aceite dos termos. */
 @Composable
 fun StepReview(viewModel: RegistrationViewModel, modifier: Modifier = Modifier) {
     val draft = viewModel.draft

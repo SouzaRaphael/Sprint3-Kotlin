@@ -29,8 +29,6 @@ android {
         }
     }
     compileOptions {
-        // `java.time` é usado em toda a camada de domínio (datas de coleta e
-        // de doação); o desugaring o disponibiliza a partir do minSdk 24.
         isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -64,5 +62,3 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
-
-

@@ -38,7 +38,6 @@ import br.com.lactarehub.core.theme.buttonShadow
 import br.com.lactarehub.core.theme.cardShadow
 import br.com.lactarehub.core.theme.withSize
 
-/** Indicador de carregamento centralizado, com altura reservada. */
 @Composable
 fun LoadingBox(modifier: Modifier = Modifier, height: Dp = 220.dp) {
     Box(
@@ -51,7 +50,6 @@ fun LoadingBox(modifier: Modifier = Modifier, height: Dp = 220.dp) {
     }
 }
 
-/** Mensagem exibida quando um filtro não devolve resultados. */
 @Composable
 fun EmptyState(message: String, modifier: Modifier = Modifier) {
     Column(
@@ -71,12 +69,6 @@ fun EmptyState(message: String, modifier: Modifier = Modifier) {
     }
 }
 
-/**
- * Card que ocupa o lugar de um conteúdo que ainda não existe.
- *
- * Quem acaba de se cadastrar não tem coleta agendada nem doação a rastrear;
- * em vez de esconder as seções, elas explicam o que fará o conteúdo aparecer.
- */
 @Composable
 fun EmptyStateCard(
     icon: ImageVector,
@@ -85,10 +77,6 @@ fun EmptyStateCard(
     modifier: Modifier = Modifier,
     actionLabel: String? = null,
     onAction: (() -> Unit)? = null,
-    /**
-     * Usa o gradiente azul dos cards de destaque, para substituir o card da
-     * próxima coleta sem abrir um buraco visual no topo da tela.
-     */
     onDarkBackground: Boolean = false,
 ) {
     val foreground = if (onDarkBackground) AppColors.Surface else AppColors.PrimaryDark
@@ -162,7 +150,6 @@ fun EmptyStateCard(
     }
 }
 
-/** Botão em pílula que se adapta ao fundo claro ou ao gradiente azul. */
 @Composable
 private fun CardActionPill(
     label: String,
@@ -194,7 +181,6 @@ private fun CardActionPill(
     }
 }
 
-/** Bloco azul-claro com ícone e texto — usado como nota de rodapé nas telas. */
 @Composable
 fun InfoNoteCard(
     icon: ImageVector,
@@ -217,7 +203,6 @@ fun InfoNoteCard(
     }
 }
 
-/** Gradiente azul dos cards de destaque, medindo a própria largura. */
 @Composable
 fun HeroGradientBox(
     modifier: Modifier = Modifier,
@@ -237,7 +222,6 @@ fun HeroGradientBox(
     )
 }
 
-/** Card branco com borda — o contêiner mais comum do design. */
 @Composable
 fun SurfaceCard(
     modifier: Modifier = Modifier,
@@ -258,6 +242,5 @@ fun SurfaceCard(
     )
 }
 
-/** Pincel do gradiente dos avatares e conquistas. */
 fun avatarBrush(gradientIndex: Int): Brush =
     Brush.linearGradient(AppColors.avatarGradient(gradientIndex))

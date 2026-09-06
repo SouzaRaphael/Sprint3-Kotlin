@@ -41,7 +41,6 @@ import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.component.SectionTitle
 import br.com.lactarehub.presentation.viewmodel.MyAreaViewModel
 
-/** Tela 08 do protótipo — área pessoal da doadora. */
 @Composable
 fun MyAreaScreen(
     viewModel: MyAreaViewModel,

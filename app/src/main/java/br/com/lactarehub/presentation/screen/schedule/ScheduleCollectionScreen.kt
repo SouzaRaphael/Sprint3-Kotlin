@@ -30,12 +30,6 @@ import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.component.SectionTitle
 import br.com.lactarehub.presentation.viewmodel.ScheduleViewModel
 
-/**
- * Aba "Doar" — formulário de agendamento de uma nova coleta.
- *
- * Complementa as telas do protótipo, dando destino aos botões
- * "Nova coleta" e "Agendar nova coleta".
- */
 @Composable
 fun ScheduleCollectionScreen(
     viewModel: ScheduleViewModel,

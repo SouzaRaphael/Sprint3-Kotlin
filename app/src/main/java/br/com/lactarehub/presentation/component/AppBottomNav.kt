@@ -21,10 +21,8 @@ import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.core.theme.safeBottomPadding
 
-/** Um item da barra inferior. */
 data class BottomNavItem(val icon: ImageVector, val label: String)
 
-/** Barra de navegação das cinco áreas do aplicativo. */
 @Composable
 fun AppBottomNav(
     items: List<BottomNavItem>,

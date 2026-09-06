@@ -45,7 +45,6 @@ import br.com.lactarehub.domain.entity.CollectionPointType
 import br.com.lactarehub.presentation.component.AppIcons
 import java.time.LocalDate
 
-/** Escolha da modalidade de entrega do leite. */
 @Composable
 fun ModeSelector(
     selected: CollectionMode,
@@ -107,7 +106,6 @@ private fun ModeTile(
     }
 }
 
-/** Fita horizontal de datas disponíveis. */
 @Composable
 fun DateStrip(
     dates: List<LocalDate>,
@@ -173,7 +171,6 @@ fun DateStrip(
     }
 }
 
-/** Grade de janelas de horário. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun TimeWindowGrid(
@@ -212,7 +209,6 @@ fun TimeWindowGrid(
     }
 }
 
-/** Lista suspensa dos pontos da rede, exibida quando a entrega é presencial. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PointPicker(

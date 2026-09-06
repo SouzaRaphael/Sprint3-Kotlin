@@ -17,7 +17,6 @@ import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.core.util.Formatters
 
-/** Avatar em gradiente com as iniciais — o design não usa fotografias. */
 @Composable
 fun AvatarCircle(
     name: String,
@@ -49,7 +48,6 @@ fun AvatarCircle(
     }
 }
 
-/** Círculo branco com sigla de estado, empilhado no hero da landing. */
 @Composable
 fun StateAvatar(state: String, modifier: Modifier = Modifier, size: Dp = 36.dp) {
     Box(

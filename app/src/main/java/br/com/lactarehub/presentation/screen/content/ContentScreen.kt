@@ -28,7 +28,6 @@ import br.com.lactarehub.presentation.component.FilterChipBar
 import br.com.lactarehub.presentation.component.LoadingBox
 import br.com.lactarehub.presentation.viewmodel.ContentViewModel
 
-/** Tela 05 do protótipo — biblioteca de conteúdo educativo. */
 @Composable
 fun ContentScreen(
     viewModel: ContentViewModel,

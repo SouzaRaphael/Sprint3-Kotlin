@@ -28,10 +28,8 @@ import br.com.lactarehub.core.theme.withSize
 import br.com.lactarehub.presentation.component.LactareLogo
 import kotlinx.coroutines.delay
 
-/** Tempo de exibição da marca antes de seguir para a home pública. */
 private const val SPLASH_DURATION_MS = 2000L
 
-/** Tela de abertura: apresenta a marca e segue para a home pública. */
 @Composable
 fun SplashScreen(goToLanding: () -> Unit) {
     var visible by remember { mutableStateOf(false) }

@@ -72,36 +72,25 @@ import androidx.compose.material.icons.outlined.WaterDrop
 import androidx.compose.material.icons.outlined.WorkspacePremium
 import androidx.compose.ui.graphics.vector.ImageVector
 
-/**
- * Ícones usados pelo aplicativo, nomeados pelo papel que cumprem no design.
- *
- * O projeto Flutter referenciava `Icons.*` diretamente em cada widget; reunir
- * tudo aqui deixa a correspondência entre os dois projetos explícita e torna
- * uma eventual troca de biblioteca de ícones uma alteração de um arquivo só.
- */
 object AppIcons {
-    // ── Navegação ────────────────────────────────────────────────
     val Back: ImageVector = Icons.AutoMirrored.Filled.ArrowBack
     val Forward: ImageVector = Icons.AutoMirrored.Filled.ArrowForward
     val Close: ImageVector = Icons.Filled.Close
     val ExpandMore: ImageVector = Icons.Filled.ExpandMore
     val Logout: ImageVector = Icons.AutoMirrored.Filled.Logout
 
-    // ── Abas ─────────────────────────────────────────────────────
     val TabHome: ImageVector = Icons.Outlined.Home
     val TabDonate: ImageVector = Icons.Outlined.FavoriteBorder
     val TabPoints: ImageVector = Icons.Outlined.LocationOn
     val TabContent: ImageVector = Icons.AutoMirrored.Outlined.MenuBook
     val TabMe: ImageVector = Icons.Outlined.Person
 
-    // ── Retorno visual ───────────────────────────────────────────
     val CheckCircleFilled: ImageVector = Icons.Filled.CheckCircle
     val InfoFilled: ImageVector = Icons.Filled.Info
     val ErrorFilled: ImageVector = Icons.Filled.Error
     val Check: ImageVector = Icons.Filled.Check
     val CheckCircleOutline: ImageVector = Icons.Outlined.CheckCircle
 
-    // ── Conteúdo e leitura ───────────────────────────────────────
     val Clock: ImageVector = Icons.Outlined.Schedule
     val Bookmark: ImageVector = Icons.Filled.Bookmark
     val BookmarkBorder: ImageVector = Icons.Outlined.BookmarkBorder
@@ -109,19 +98,16 @@ object AppIcons {
     val Support: ImageVector = Icons.Outlined.SupportAgent
     val Learn: ImageVector = Icons.AutoMirrored.Outlined.MenuBook
 
-    // ── Landing ──────────────────────────────────────────────────
     val Quote: ImageVector = Icons.Filled.FormatQuote
     val Play: ImageVector = Icons.Filled.PlayArrow
     val StepPerson: ImageVector = Icons.Outlined.Person
     val StepPlace: ImageVector = Icons.Outlined.LocationOn
     val StepHeart: ImageVector = Icons.Outlined.FavoriteBorder
 
-    // ── Login e cadastro ─────────────────────────────────────────
     val Visibility: ImageVector = Icons.Outlined.Visibility
     val VisibilityOff: ImageVector = Icons.Outlined.VisibilityOff
     val Calendar: ImageVector = Icons.Outlined.CalendarToday
 
-    // ── Home da doadora ──────────────────────────────────────────
     val Notifications: ImageVector = Icons.Outlined.Notifications
     val Add: ImageVector = Icons.Filled.Add
     val Gift: ImageVector = Icons.Outlined.CardGiftcard
@@ -133,14 +119,12 @@ object AppIcons {
     val HeartFilled: ImageVector = Icons.Filled.Favorite
     val CalendarMonth: ImageVector = Icons.Outlined.CalendarMonth
 
-    // ── Agendamento ──────────────────────────────────────────────
     val ModeHome: ImageVector = Icons.Outlined.Home
     val ModeStore: ImageVector = Icons.Outlined.Storefront
     val ModeHospital: ImageVector = Icons.Outlined.LocalHospital
     val RadioChecked: ImageVector = Icons.Filled.RadioButtonChecked
     val RadioUnchecked: ImageVector = Icons.Filled.RadioButtonUnchecked
 
-    // ── Mapa e pontos ────────────────────────────────────────────
     val Search: ImageVector = Icons.Filled.Search
     val SearchOff: ImageVector = Icons.Outlined.SearchOff
     val Drop: ImageVector = Icons.Filled.WaterDrop
@@ -152,11 +136,9 @@ object AppIcons {
     val InfoOutline: ImageVector = Icons.Outlined.Info
     val LocationOff: ImageVector = Icons.Outlined.LocationOff
 
-    // ── Doações ──────────────────────────────────────────────────
     val Hospital: ImageVector = Icons.Outlined.LocalHospital
     val Science: ImageVector = Icons.Outlined.Science
 
-    // ── Conquistas ───────────────────────────────────────────────
     val BadgeDrop: ImageVector = Icons.Outlined.WaterDrop
     val BadgeMedal: ImageVector = Icons.Outlined.WorkspacePremium
     val BadgeStar: ImageVector = Icons.Outlined.StarBorder
@@ -165,13 +147,11 @@ object AppIcons {
     val BadgeSparkle: ImageVector = Icons.Outlined.AutoAwesome
     val Locked: ImageVector = Icons.Outlined.Lock
 
-    // ── Depoimentos ──────────────────────────────────────────────
     val Chat: ImageVector = Icons.Outlined.ChatBubbleOutline
     val Edit: ImageVector = Icons.Outlined.Edit
     val Send: ImageVector = Icons.AutoMirrored.Filled.Send
     val Shield: ImageVector = Icons.Outlined.Shield
 
-    // ── Perfil ───────────────────────────────────────────────────
     val Email: ImageVector = Icons.Filled.AlternateEmail
     val Phone: ImageVector = Icons.Filled.PhoneIphone
     val Cake: ImageVector = Icons.Outlined.Cake

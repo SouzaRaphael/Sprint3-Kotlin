@@ -26,12 +26,10 @@ import androidx.compose.ui.unit.dp
 import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppTextStyles
 
-/** Título de seção, com sobrelinha e ação opcionais. */
 @Composable
 fun SectionTitle(
     title: String,
     modifier: Modifier = Modifier,
-    /** Rótulo em maiúsculas acima do título, como "COMO FUNCIONA". */
     overline: String? = null,
     actionLabel: String? = null,
     onAction: (() -> Unit)? = null,
@@ -68,13 +66,11 @@ fun SectionTitle(
     }
 }
 
-/** Par número + legenda usado nas estatísticas da rede e do impacto pessoal. */
 @Composable
 fun StatTile(
     value: String,
     label: String,
     modifier: Modifier = Modifier,
-    /** Ajusta as cores para a faixa escura da landing. */
     onDark: Boolean = false,
     valueColor: Color? = null,
     horizontalAlignment: Alignment.Horizontal = Alignment.Start,
@@ -103,11 +99,6 @@ fun StatTile(
     }
 }
 
-/**
- * Linha de informação: ícone em quadrado azul-claro, rótulo e valor.
- *
- * Usada no detalhe do ponto de coleta e nos cards da tela de perfil.
- */
 @Composable
 fun InfoRow(
     icon: ImageVector,

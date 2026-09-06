@@ -10,7 +10,6 @@ import br.com.lactarehub.domain.entity.Article
 import br.com.lactarehub.domain.entity.ArticleCategory
 import kotlinx.coroutines.launch
 
-/** Estado da aba Conteúdo. */
 class ContentViewModel : ViewModel() {
 
     var articles by mutableStateOf<List<Article>>(emptyList())
@@ -20,7 +19,6 @@ class ContentViewModel : ViewModel() {
     var isLoading by mutableStateOf(true)
         private set
 
-    /** "Todos" seguido das categorias, na ordem do enum. */
     val filterLabels: List<String>
         get() = listOf("Todos") + ArticleCategory.entries.map { it.label }
 

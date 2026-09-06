@@ -43,14 +43,12 @@ import br.com.lactarehub.presentation.component.SegmentedFilter
 import br.com.lactarehub.presentation.component.TestimonialBadge
 import br.com.lactarehub.presentation.viewmodel.TestimonialsViewModel
 
-/** Tela 04 do protótipo — depoimentos das doadoras da rede. */
 @Composable
 fun TestimonialsScreen(
     goBack: () -> Unit,
     onWriteTestimonial: () -> Unit,
     viewModel: TestimonialsViewModel = viewModel(),
 ) {
-    // Recarrega ao voltar da tela de escrita, para mostrar o novo depoimento.
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { viewModel.refresh() }
 
     Column(
@@ -117,7 +115,6 @@ fun TestimonialsScreen(
     }
 }
 
-/** Depoimento de uma doadora: avatar, autoria, etiqueta e citação. */
 @Composable
 fun TestimonialCard(testimonial: Testimonial, modifier: Modifier = Modifier) {
     Column(
@@ -158,7 +155,6 @@ fun TestimonialCard(testimonial: Testimonial, modifier: Modifier = Modifier) {
     }
 }
 
-/** Convite, ao fim da lista, para a doadora publicar sua própria história. */
 @Composable
 fun ShareStoryCard(onWrite: () -> Unit, modifier: Modifier = Modifier) {
     Column(

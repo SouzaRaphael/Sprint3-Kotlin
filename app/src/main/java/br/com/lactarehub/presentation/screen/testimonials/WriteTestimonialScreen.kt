@@ -40,10 +40,6 @@ import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.component.TestimonialBadge
 import br.com.lactarehub.presentation.viewmodel.WriteTestimonialViewModel
 
-/**
- * Formulário de publicação de depoimento, aberto pelo card
- * "Compartilhe sua história".
- */
 @Composable
 fun WriteTestimonialScreen(
     goBack: () -> Unit,
@@ -141,7 +137,6 @@ fun WriteTestimonialScreen(
     }
 }
 
-/** Escolha entre "1ª doação" e "Recorrente". */
 @Composable
 private fun TypeChoice(
     type: TestimonialType,

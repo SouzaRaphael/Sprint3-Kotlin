@@ -4,7 +4,6 @@ import br.com.lactarehub.domain.entity.HowItWorksIcon
 import br.com.lactarehub.domain.entity.HowItWorksStep
 import br.com.lactarehub.domain.entity.ImpactStats
 
-/** Conteúdo institucional apresentado na landing pública. */
 object InstitutionalMockDatasource {
 
     val stats = ImpactStats(

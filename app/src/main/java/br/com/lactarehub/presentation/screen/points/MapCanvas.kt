@@ -27,11 +27,9 @@ import androidx.compose.ui.unit.dp
 import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.presentation.component.AppIcons
 
-/** Vias horizontais e verticais, em fração da largura/altura. */
 private val verticalRoads = listOf(0.18f, 0.46f, 0.74f)
 private val horizontalRoads = listOf(0.26f, 0.55f, 0.82f)
 
-/** Manchas de vegetação: centro x, centro y e raio, em fração. */
 private val parks = listOf(
     Triple(0.14f, 0.18f, 0.16f),
     Triple(0.82f, 0.14f, 0.13f),
@@ -39,13 +37,6 @@ private val parks = listOf(
     Triple(0.88f, 0.66f, 0.15f),
 )
 
-/**
- * Mapa ilustrado desenhado à mão.
- *
- * O protótipo mostra um mapa estilizado, sem fotografia de satélite. Como
- * esta Sprint não integra SDK de mapas, o traçado é reproduzido com o
- * `Canvas` do Compose — sem chave de API e sem acesso à rede.
- */
 @Composable
 fun MapCanvas(modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.fillMaxSize()) {
@@ -65,7 +56,6 @@ fun MapCanvas(modifier: Modifier = Modifier) {
             center = Offset(size.width * 0.62f, size.height * 0.36f),
         )
 
-        // Quarteirões: uma grade fina por trás das avenidas.
         for (i in 1 until 6) {
             val dx = size.width * i / 6f
             val dy = size.height * i / 6f
@@ -83,7 +73,6 @@ fun MapCanvas(modifier: Modifier = Modifier) {
             )
         }
 
-        // Avenidas principais, em branco e mais largas.
         verticalRoads.forEach { x ->
             drawLine(
                 color = Color.White,
@@ -103,7 +92,6 @@ fun MapCanvas(modifier: Modifier = Modifier) {
             )
         }
 
-        // Avenida diagonal, que quebra a rigidez da grade.
         drawLine(
             color = Color.White,
             start = Offset(-10f, size.height * 0.92f),
@@ -114,7 +102,6 @@ fun MapCanvas(modifier: Modifier = Modifier) {
     }
 }
 
-/** Marcador de gota usado para cada ponto da rede. */
 @Composable
 fun MapPin(
     isSelected: Boolean,
@@ -164,7 +151,6 @@ fun MapPin(
     }
 }
 
-/** Indicador da posição atual da doadora. */
 @Composable
 fun CurrentLocationDot(modifier: Modifier = Modifier) {
     Box(

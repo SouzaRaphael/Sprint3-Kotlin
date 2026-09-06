@@ -5,7 +5,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.time.LocalDate
 
-/** Cobre as formatações de exibição compartilhadas entre as telas. */
 class FormattersTest {
 
     @Test

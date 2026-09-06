@@ -42,7 +42,6 @@ import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.component.SecondaryButton
 import br.com.lactarehub.presentation.viewmodel.CollectionPointDetailViewModel
 
-/** Detalhe de um ponto da rede. */
 @Composable
 fun CollectionPointDetailScreen(
     pointId: String,

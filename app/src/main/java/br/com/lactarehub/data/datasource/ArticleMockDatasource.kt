@@ -4,11 +4,6 @@ import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.domain.entity.Article
 import br.com.lactarehub.domain.entity.ArticleCategory
 
-/**
- * Biblioteca de conteúdo educativo do Lactare.
- *
- * Dados simulados desta Sprint: nenhuma chamada de rede é feita.
- */
 object ArticleMockDatasource {
 
     val items: List<Article> = listOf(
@@ -206,6 +201,5 @@ object ArticleMockDatasource {
         ),
     )
 
-    /** Leituras destacadas nos carrosséis das telas da doadora. */
     val featuredIds: List<String> = listOf("art-frio-inverno", "art-jornada-uti")
 }

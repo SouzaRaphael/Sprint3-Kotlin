@@ -39,13 +39,6 @@ import br.com.lactarehub.presentation.screen.splash.SplashScreen
 import br.com.lactarehub.presentation.screen.testimonials.TestimonialsScreen
 import br.com.lactarehub.presentation.screen.testimonials.WriteTestimonialScreen
 
-/**
- * Roteamento central do aplicativo.
- *
- * Cada tela recebe apenas callbacks de navegação, o que a mantém ignorante
- * sobre o `NavController` e fácil de testar isoladamente — a mesma divisão do
- * `AppNavigation` do projeto Flutter.
- */
 @Composable
 fun LactareApp() {
     val navController = rememberNavController()
@@ -53,12 +46,8 @@ fun LactareApp() {
     val scope = rememberCoroutineScope()
     val feedback = rememberAppFeedbackController(snackbarHostState, scope)
 
-    // A aba ativa da casca vive acima do NavHost: é assim que o perfil
-    // consegue pedir "abra o agendamento" ao voltar, e que o login e o
-    // cadastro escolhem em qual aba a casca abre.
     var shellTab by rememberSaveable { mutableStateOf(ShellTab.INICIO) }
 
-    /** Abre a casca autenticada já na aba pedida, limpando a pilha pública. */
     fun openApp(tab: ShellTab) {
         shellTab = tab
         navController.navigate(AppRoutes.APP) {
@@ -192,8 +181,6 @@ fun LactareApp() {
                 composable(AppRoutes.PROFILE) {
                     ProfileScreen(
                         goBack = { navController.popBackStack() },
-                        // Fecha o perfil pedindo à casca que abra a aba de
-                        // agendamento — o `Navigator.pop(context, true)` do Flutter.
                         onScheduleCollection = {
                             shellTab = ShellTab.DOAR
                             navController.popBackStack()
@@ -213,7 +200,6 @@ fun LactareApp() {
     }
 }
 
-/** Encerra a sessão e devolve o aplicativo à home pública, sem pilha. */
 private fun signOutTo(navController: NavHostController) {
     navController.navigate(AppRoutes.LANDING) {
         popUpTo(navController.graph.id) { inclusive = true }

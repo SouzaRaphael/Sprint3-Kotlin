@@ -25,10 +25,8 @@ import br.com.lactarehub.core.theme.AppTextStyles
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-/** Vocabulário visual das mensagens de retorno. */
 enum class FeedbackKind { SUCCESS, INFO, ERROR }
 
-/** Conteúdo de uma mensagem, já com o tom escolhido. */
 private class AppSnackbarVisuals(
     override val message: String,
     val kind: FeedbackKind,
@@ -38,13 +36,6 @@ private class AppSnackbarVisuals(
     override val duration: SnackbarDuration = SnackbarDuration.Short
 }
 
-/**
- * Retorno visual padronizado após as ações do usuário.
- *
- * Centralizar aqui garante que confirmar uma coleta, publicar um depoimento
- * ou falhar no login sempre respondam com o mesmo vocabulário visual — é o
- * equivalente ao `ScaffoldMessenger` usado no projeto Flutter.
- */
 class AppFeedbackController(
     private val hostState: SnackbarHostState,
     private val scope: CoroutineScope,
@@ -67,7 +58,6 @@ val LocalAppFeedback = staticCompositionLocalOf<AppFeedbackController> {
     error("Nenhum AppFeedbackController disponível nesta árvore.")
 }
 
-/** Aparência da mensagem: ícone colorido à esquerda e texto claro. */
 @Composable
 fun AppSnackbar(data: SnackbarData) {
     val visuals = data.visuals
@@ -109,7 +99,6 @@ fun AppSnackbar(data: SnackbarData) {
     }
 }
 
-/** Cria o controlador amarrado a um [SnackbarHostState]. */
 @Composable
 fun rememberAppFeedbackController(
     hostState: SnackbarHostState,

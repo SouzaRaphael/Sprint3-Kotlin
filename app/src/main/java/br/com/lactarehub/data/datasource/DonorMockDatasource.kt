@@ -5,15 +5,8 @@ import br.com.lactarehub.domain.entity.AchievementIcon
 import br.com.lactarehub.domain.entity.AchievementStatus
 import br.com.lactarehub.domain.entity.Donor
 
-/**
- * Persona de demonstração e as trilhas de conquistas.
- *
- * Este é o catálogo: quem está de fato na sessão é decidido pelo
- * `SessionMockDatasource`.
- */
 object DonorMockDatasource {
 
-    /** Doadora com histórico, carregada pelo login com as credenciais de teste. */
     val demoProfile = Donor(
         id = "doadora-giovana",
         fullName = "Giovana Aparecida Ramos",
@@ -40,7 +33,6 @@ object DonorMockDatasource {
         avatarGradientIndex = 0,
     )
 
-    /** Medalhas da doadora com histórico. */
     val demoAchievements: List<Achievement> = listOf(
         Achievement(
             id = "conq-primeira-doacao",
@@ -92,7 +84,6 @@ object DonorMockDatasource {
         ),
     )
 
-    /** Mesma trilha, no ponto de partida de quem acabou de se cadastrar. */
     val startingAchievements: List<Achievement> = listOf(
         Achievement(
             id = "conq-primeira-doacao",

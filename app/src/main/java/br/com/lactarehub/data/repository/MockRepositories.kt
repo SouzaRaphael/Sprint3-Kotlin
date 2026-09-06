@@ -26,10 +26,8 @@ import br.com.lactarehub.domain.repository.TestimonialRepository
 import kotlinx.coroutines.delay
 import java.time.LocalDate
 
-/** Latência curta comum aos repositórios de leitura. */
 private const val LATENCY_MS = 250L
 
-/** Conteúdo educativo sobre os dados mockados. */
 class ArticleRepositoryImpl : ArticleRepository {
 
     override suspend fun listArticles(): List<Article> {
@@ -48,7 +46,6 @@ class ArticleRepositoryImpl : ArticleRepository {
     }
 }
 
-/** Pontos da rede sobre os dados mockados. */
 class CollectionPointRepositoryImpl : CollectionPointRepository {
 
     override suspend fun listPoints(): List<CollectionPoint> {
@@ -62,7 +59,6 @@ class CollectionPointRepositoryImpl : CollectionPointRepository {
     }
 }
 
-/** Perfil da doadora da sessão atual. */
 class DonorRepositoryImpl : DonorRepository {
 
     override suspend fun getProfile(): Donor {
@@ -76,7 +72,6 @@ class DonorRepositoryImpl : DonorRepository {
     }
 }
 
-/** Histórico de doações da sessão atual. */
 class DonationRepositoryImpl : DonationRepository {
 
     override suspend fun listDonations(): List<Donation> {
@@ -100,12 +95,6 @@ class DonationRepositoryImpl : DonationRepository {
     }
 }
 
-/**
- * Agenda de coletas da sessão atual.
- *
- * As alterações ficam em memória: confirmar ou reagendar reflete nas demais
- * telas enquanto o aplicativo estiver aberto.
- */
 class ScheduleRepositoryImpl : ScheduleRepository {
 
     override suspend fun getNextCollection(): CollectionSchedule? {
@@ -137,12 +126,6 @@ class ScheduleRepositoryImpl : ScheduleRepository {
     }
 }
 
-/**
- * Depoimentos sobre os dados mockados.
- *
- * O que a doadora publica entra no topo da lista e permanece enquanto o
- * aplicativo estiver aberto.
- */
 class TestimonialRepositoryImpl : TestimonialRepository {
 
     override suspend fun listTestimonials(): List<Testimonial> {
@@ -161,7 +144,6 @@ class TestimonialRepositoryImpl : TestimonialRepository {
     }
 }
 
-/** Conteúdo institucional sobre os dados mockados. */
 class InstitutionalRepositoryImpl : InstitutionalRepository {
 
     override suspend fun getImpactStats(): ImpactStats {

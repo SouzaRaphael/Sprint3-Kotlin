@@ -4,11 +4,6 @@ import br.com.lactarehub.domain.entity.CollectionPoint
 import br.com.lactarehub.domain.entity.CollectionPointType
 import br.com.lactarehub.domain.repository.CollectionPointRepository
 
-/**
- * Lista os pontos de coleta, opcionalmente filtrados.
- *
- * O filtro vive no caso de uso — assim a tela não repete regra de negócio.
- */
 class ListCollectionPoints(private val repository: CollectionPointRepository) {
     suspend operator fun invoke(
         type: CollectionPointType? = null,
@@ -31,7 +26,6 @@ class ListCollectionPoints(private val repository: CollectionPointRepository) {
     }
 }
 
-/** Ponto pelo identificador, para a tela de detalhe. */
 class GetCollectionPoint(private val repository: CollectionPointRepository) {
     suspend operator fun invoke(id: String): CollectionPoint? = repository.getById(id)
 }

@@ -23,7 +23,6 @@ import br.com.lactarehub.presentation.component.LoadingBox
 import br.com.lactarehub.presentation.viewmodel.LandingViewModel
 import kotlinx.coroutines.launch
 
-/** Tela 01 do protótipo — apresentação pública do Lactare. */
 @Composable
 fun LandingScreen(
     onStartDonation: () -> Unit,
@@ -54,7 +53,6 @@ fun LandingScreen(
                 HeroSection(
                     stats = stats,
                     onStartDonation = onStartDonation,
-                    // "Como funciona" rola a página até a seção dos três passos.
                     onHowItWorks = {
                         scope.launch { scrollState.animateScrollTo(howItWorksOffset) }
                     },

@@ -20,16 +20,12 @@ import androidx.compose.ui.unit.sp
 import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppTextStyles
 
-/** Formatos da marca usados no design. */
 enum class LactareLogoVariant {
-    /** Círculo azul com a letra L — landing, login e splash. */
     CIRCLE,
 
-    /** Quadrado arredondado com anel interno — cabeçalho da área da doadora. */
     ROUNDED,
 }
 
-/** Símbolo do Lactare, opcionalmente acompanhado do nome. */
 @Composable
 fun LactareLogo(
     modifier: Modifier = Modifier,

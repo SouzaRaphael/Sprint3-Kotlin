@@ -1,12 +1,5 @@
 package br.com.lactarehub.presentation.navigation
 
-/**
- * Nomes das rotas. Os caminhos espelham os do protótipo.
- *
- * As telas de detalhe recebem apenas o identificador da entidade e a buscam
- * no repositório — no Flutter o objeto viajava em `settings.arguments`, o que
- * não sobrevive à recriação de processo do Android.
- */
 object AppRoutes {
     const val SPLASH = "splash"
     const val LANDING = "landing"
@@ -14,7 +7,6 @@ object AppRoutes {
     const val REGISTRATION = "cadastro"
     const val REGISTRATION_SUCCESS = "cadastro/sucesso"
 
-    /** Casca autenticada com as cinco abas. */
     const val APP = "app"
 
     const val TESTIMONIALS = "depoimentos"

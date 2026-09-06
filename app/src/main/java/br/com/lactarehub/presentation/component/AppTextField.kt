@@ -23,13 +23,6 @@ import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppRadius
 import br.com.lactarehub.core.theme.AppTextStyles
 
-/**
- * Campo de formulário com rótulo acima, como em todos os formulários do
- * design.
- *
- * A validação segue o modelo do Flutter: a mensagem de [errorMessage] é
- * calculada pela tela e desce pronta para exibição.
- */
 @Composable
 fun AppTextField(
     label: String,
@@ -43,7 +36,6 @@ fun AppTextField(
     maxLines: Int = 1,
     readOnly: Boolean = false,
     errorMessage: String? = null,
-    /** Ação alinhada à direita do rótulo, como "Esqueceu a senha?". */
     trailingLabel: String? = null,
     onTrailingLabelClick: (() -> Unit)? = null,
     suffix: (@Composable () -> Unit)? = null,

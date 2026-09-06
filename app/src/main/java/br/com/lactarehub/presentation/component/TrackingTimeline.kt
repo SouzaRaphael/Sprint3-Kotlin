@@ -25,7 +25,6 @@ import br.com.lactarehub.core.theme.withSize
 import br.com.lactarehub.domain.entity.TrackingStep
 import br.com.lactarehub.domain.entity.TrackingStepStatus
 
-/** Linha do tempo vertical do percurso do leite doado. */
 @Composable
 fun TrackingTimeline(steps: List<TrackingStep>, modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {

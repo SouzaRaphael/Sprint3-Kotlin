@@ -28,7 +28,6 @@ import br.com.lactarehub.core.theme.withSize
 import br.com.lactarehub.presentation.component.AppIcons
 import br.com.lactarehub.presentation.component.PrimaryButton
 
-/** Confirmação exibida ao concluir o cadastro. */
 @Composable
 fun RegistrationSuccessScreen(onEnterApp: () -> Unit) {
     val nextSteps = listOf(

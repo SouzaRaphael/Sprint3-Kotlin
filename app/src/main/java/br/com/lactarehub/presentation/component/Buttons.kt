@@ -27,20 +27,12 @@ import br.com.lactarehub.core.theme.AppRadius
 import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.core.theme.buttonShadow
 
-/**
- * Botão azul em pílula — a ação principal de cada tela.
- *
- * Enquanto [isLoading] estiver ativo o botão fica desabilitado e mostra um
- * indicador, o que dá retorno imediato às ações do usuário.
- */
 @Composable
 fun PrimaryButton(
     label: String,
     onClick: (() -> Unit)?,
     modifier: Modifier = Modifier,
-    /** Ícone antes do texto. */
     icon: ImageVector? = null,
-    /** Ícone depois do texto — por padrão a seta do design. */
     trailingIcon: ImageVector = AppIcons.Forward,
     showTrailingIcon: Boolean = true,
     isLoading: Boolean = false,
@@ -101,7 +93,6 @@ fun PrimaryButton(
     }
 }
 
-/** Botão branco com borda — a ação alternativa ao lado da principal. */
 @Composable
 fun SecondaryButton(
     label: String,

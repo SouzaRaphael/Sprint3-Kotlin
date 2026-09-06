@@ -57,10 +57,6 @@ private val LactareTypography = Typography(
     labelSmall = AppTextStyles.overline,
 )
 
-/**
- * Tema único do aplicativo — o design de referência é claro, então não há
- * variante escura nem cor dinâmica.
- */
 @Composable
 fun LactareHubTheme(content: @Composable () -> Unit) {
     MaterialTheme(
@@ -70,5 +66,4 @@ fun LactareHubTheme(content: @Composable () -> Unit) {
     )
 }
 
-/** Estilo padrão do texto quando nenhum outro é informado. */
 val DefaultTextStyle: TextStyle get() = AppTextStyles.body

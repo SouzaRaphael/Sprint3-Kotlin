@@ -36,7 +36,6 @@ import br.com.lactarehub.presentation.component.LocalAppFeedback
 import br.com.lactarehub.presentation.component.SectionTitle
 import br.com.lactarehub.presentation.viewmodel.DonorHomeViewModel
 
-/** Tela 07 do protótipo — home da doadora autenticada. */
 @Composable
 fun DonorHomeScreen(
     viewModel: DonorHomeViewModel,

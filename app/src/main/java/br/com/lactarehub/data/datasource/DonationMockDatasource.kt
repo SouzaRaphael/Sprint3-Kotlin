@@ -6,12 +6,6 @@ import br.com.lactarehub.domain.entity.TrackingStep
 import br.com.lactarehub.domain.entity.TrackingStepStatus
 import java.time.LocalDate
 
-/**
- * Histórico de doações da persona de demonstração, com as linhas do tempo
- * de rastreio.
- *
- * É catálogo: as doações da sessão atual vêm do `SessionMockDatasource`.
- */
 object DonationMockDatasource {
 
     val demoItems: List<Donation> = listOf(

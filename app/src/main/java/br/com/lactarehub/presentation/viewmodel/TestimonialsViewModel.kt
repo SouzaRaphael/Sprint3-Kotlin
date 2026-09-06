@@ -10,7 +10,6 @@ import br.com.lactarehub.domain.entity.Testimonial
 import br.com.lactarehub.domain.entity.TestimonialType
 import kotlinx.coroutines.launch
 
-/** Estado da tela de depoimentos. */
 class TestimonialsViewModel : ViewModel() {
 
     var testimonials by mutableStateOf<List<Testimonial>>(emptyList())
@@ -43,10 +42,6 @@ class TestimonialsViewModel : ViewModel() {
         load()
     }
 
-    /**
-     * Revalidação silenciosa, usada ao voltar da tela de escrita: o depoimento
-     * recém-publicado precisa aparecer sem que a lista pisque um indicador.
-     */
     fun refresh() {
         viewModelScope.launch { testimonials = ServiceLocator.listTestimonials(type) }
     }

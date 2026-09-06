@@ -22,7 +22,6 @@ import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.domain.entity.DonationStatus
 import br.com.lactarehub.domain.entity.TestimonialType
 
-/** Etiqueta em pílula usada para tipos e situações. */
 @Composable
 fun StatusBadge(
     label: String,
@@ -45,10 +44,6 @@ fun StatusBadge(
     }
 }
 
-/**
- * Etiqueta de tipo de doadora — verde para recorrente, rosa para a
- * primeira doação, como no design.
- */
 @Composable
 fun TestimonialBadge(type: TestimonialType, modifier: Modifier = Modifier) {
     val recurring = type == TestimonialType.RECORRENTE
@@ -60,7 +55,6 @@ fun TestimonialBadge(type: TestimonialType, modifier: Modifier = Modifier) {
     )
 }
 
-/** Etiqueta de situação de uma doação. */
 @Composable
 fun DonationBadge(status: DonationStatus, modifier: Modifier = Modifier) {
     val background = when (status) {
@@ -81,7 +75,6 @@ fun DonationBadge(status: DonationStatus, modifier: Modifier = Modifier) {
     )
 }
 
-/** Indicador "aberto / fechado" com um ponto colorido à esquerda. */
 @Composable
 fun DotStatusLabel(label: String, color: Color, modifier: Modifier = Modifier) {
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {

@@ -42,7 +42,6 @@ import br.com.lactarehub.presentation.component.AppIcons
 import br.com.lactarehub.presentation.component.DonationBadge
 import br.com.lactarehub.presentation.component.HeroGradientBox
 
-/** Card azul em gradiente com a próxima coleta e suas duas ações. */
 @Composable
 fun NextCollectionCard(
     schedule: CollectionSchedule,
@@ -110,7 +109,6 @@ fun NextCollectionCard(
     }
 }
 
-/** Selo com mês e dia, no canto do card. */
 @Composable
 private fun DateBadge(schedule: CollectionSchedule) {
     Column(
@@ -133,7 +131,6 @@ private fun DateBadge(schedule: CollectionSchedule) {
     }
 }
 
-/** Botão interno do card, em branco sólido ou translúcido. */
 @Composable
 private fun CardAction(
     label: String,
@@ -175,16 +172,13 @@ private fun CardAction(
     }
 }
 
-/** Uma das quatro entradas rápidas abaixo do card de coleta. */
 data class QuickAction(
     val icon: ImageVector,
     val label: String,
     val onClick: () -> Unit,
-    /** A primeira ação recebe o azul cheio no design. */
     val isHighlighted: Boolean = false,
 )
 
-/** Fileira de atalhos da home da doadora. */
 @Composable
 fun QuickActionsRow(actions: List<QuickAction>, modifier: Modifier = Modifier) {
     Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
@@ -231,14 +225,12 @@ private fun QuickActionButton(action: QuickAction, modifier: Modifier = Modifier
     }
 }
 
-/** Resumo do impacto pessoal da doadora, com a faixa de sequência embaixo. */
 @Composable
 fun ImpactSummaryCard(
     donor: Donor,
     onOpenAchievements: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // Quem ainda não doou não tem sequência a exibir: a faixa vira convite.
     val starting = donor.isStartingJourney
     val streakTitle = if (starting) {
         "Sua jornada começa agora"
@@ -334,10 +326,6 @@ fun ImpactSummaryCard(
     }
 }
 
-/**
- * Cartão de uma doação em rastreamento. Tocar abre os detalhes com a
- * linha do tempo completa.
- */
 @Composable
 fun DonationPreviewCard(
     donation: Donation,
@@ -368,7 +356,6 @@ fun DonationPreviewCard(
     }
 }
 
-/** Mensagem da equipe do banco de leite, em destaque azul-claro. */
 @Composable
 fun TeamMessageCard(
     donorFirstName: String,
@@ -408,7 +395,6 @@ fun TeamMessageCard(
     }
 }
 
-/** Saudação com avatar e sino de notificações. */
 @Composable
 fun Greeting(name: String, gradientIndex: Int, modifier: Modifier = Modifier) {
     Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -439,5 +425,4 @@ fun Greeting(name: String, gradientIndex: Int, modifier: Modifier = Modifier) {
     }
 }
 
-/** Espaçamento horizontal padrão entre cards de carrossel. */
 val carouselSpacing: Arrangement.HorizontalOrVertical = Arrangement.spacedBy(AppSpacing.md)

@@ -38,7 +38,6 @@ import br.com.lactarehub.presentation.component.LocalAppFeedback
 import br.com.lactarehub.presentation.component.PrimaryButton
 import br.com.lactarehub.presentation.viewmodel.LoginViewModel
 
-/** Tela 02 do protótipo — acesso à área da doadora. */
 @Composable
 fun LoginScreen(
     onSignedIn: () -> Unit,

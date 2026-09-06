@@ -39,7 +39,6 @@ import br.com.lactarehub.presentation.component.FilterChipStyle
 import br.com.lactarehub.presentation.component.LocalAppFeedback
 import br.com.lactarehub.presentation.viewmodel.CollectionPointsViewModel
 
-/** Tela 06 do protótipo — mapa dos pontos da rede. */
 @Composable
 fun CollectionPointsScreen(
     viewModel: CollectionPointsViewModel,
@@ -137,7 +136,6 @@ fun CollectionPointsScreen(
     }
 }
 
-/** Busca e alternador "Aberto agora", flutuando sobre o mapa. */
 @Composable
 private fun SearchBar(
     query: String,

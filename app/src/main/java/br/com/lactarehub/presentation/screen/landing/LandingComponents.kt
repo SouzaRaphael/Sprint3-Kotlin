@@ -51,7 +51,6 @@ import br.com.lactarehub.presentation.component.SecondaryButton
 import br.com.lactarehub.presentation.component.StateAvatar
 import br.com.lactarehub.presentation.component.StatTile
 
-/** Barra fixa do topo da home pública. */
 @Composable
 fun LandingHeader(onLogin: () -> Unit, modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth().background(AppColors.Surface)) {
@@ -81,11 +80,6 @@ fun LandingHeader(onLogin: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
-/**
- * Esfera azul difusa que fecha o hero da home pública.
- *
- * Reproduzida com gradientes — o design não depende de imagem.
- */
 @Composable
 fun HeroBlob(modifier: Modifier = Modifier, height: Dp = 260.dp) {
     Box(
@@ -122,7 +116,6 @@ fun HeroBlob(modifier: Modifier = Modifier, height: Dp = 260.dp) {
     }
 }
 
-/** Halo suave desenhado com um gradiente radial que some nas bordas. */
 @Composable
 private fun SoftGlow(size: Dp, color: Color, modifier: Modifier = Modifier) {
     Canvas(modifier = modifier.size(size)) {
@@ -137,7 +130,6 @@ private fun SoftGlow(size: Dp, color: Color, modifier: Modifier = Modifier) {
     }
 }
 
-/** Abertura da home pública: chamada principal e provas sociais. */
 @Composable
 fun HeroSection(
     stats: ImpactStats,
@@ -205,7 +197,6 @@ private fun NetworkBadge(stats: ImpactStats) {
     }
 }
 
-/** Título com a palavra "salva" em itálico azul, como no design. */
 @Composable
 private fun Headline() {
     val accent = AppTextStyles.heroTitleAccent
@@ -229,7 +220,6 @@ private fun Headline() {
 
 @Composable
 private fun SocialProof(stats: ImpactStats, states: List<String>) {
-    // Arredondado para a centena, como no design: "+1.200 nutrizes".
     val roundedDonors = (stats.donorsInNetwork / 100) * 100
 
     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -255,7 +245,6 @@ private fun SocialProof(stats: ImpactStats, states: List<String>) {
     }
 }
 
-/** Faixa escura com os quatro números da rede. */
 @Composable
 fun ImpactBand(stats: ImpactStats, modifier: Modifier = Modifier) {
     Column(
@@ -298,7 +287,6 @@ fun ImpactBand(stats: ImpactStats, modifier: Modifier = Modifier) {
     }
 }
 
-/** Seção "Em 3 passos você se torna parte da rede". */
 @Composable
 fun HowItWorksSection(steps: List<HowItWorksStep>, modifier: Modifier = Modifier) {
     Column(
@@ -374,7 +362,6 @@ private fun StepCard(step: HowItWorksStep, modifier: Modifier = Modifier) {
     }
 }
 
-/** Convite para a tela de depoimentos. */
 @Composable
 fun StoriesTeaser(onOpen: () -> Unit, modifier: Modifier = Modifier) {
     Column(
@@ -423,7 +410,6 @@ fun StoriesTeaser(onOpen: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
-/** Rodapé institucional da home pública. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun LandingFooter(modifier: Modifier = Modifier) {

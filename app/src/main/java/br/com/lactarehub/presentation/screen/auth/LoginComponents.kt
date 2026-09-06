@@ -32,7 +32,6 @@ import br.com.lactarehub.core.theme.AppSpacing
 import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.domain.entity.TestCredential
 
-/** Botão "Entrar com Google" — nesta Sprint apenas simula o acesso social. */
 @Composable
 fun GoogleSignInButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     OutlinedButton(
@@ -53,7 +52,6 @@ fun GoogleSignInButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
-/** "G" nas quatro cores da marca, desenhado sem depender de asset. */
 @Composable
 private fun GoogleGlyph() {
     Box(modifier = Modifier.size(22.dp), contentAlignment = Alignment.Center) {
@@ -89,11 +87,6 @@ private fun GoogleGlyph() {
     }
 }
 
-/**
- * Caixa azul-clara com as contas de demonstração.
- *
- * Tocar em uma linha preenche o formulário, o que abrevia a avaliação.
- */
 @Composable
 fun TestCredentialsBox(
     credentials: List<TestCredential>,
@@ -143,7 +136,6 @@ fun TestCredentialsBox(
     }
 }
 
-/** Separador "ou" entre o login por senha e o acesso social. */
 @Composable
 fun OrDivider(modifier: Modifier = Modifier) {
     Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {

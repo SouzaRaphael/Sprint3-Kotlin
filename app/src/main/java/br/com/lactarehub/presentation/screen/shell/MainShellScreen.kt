@@ -25,7 +25,6 @@ import br.com.lactarehub.presentation.viewmodel.DonorHomeViewModel
 import br.com.lactarehub.presentation.viewmodel.MyAreaViewModel
 import br.com.lactarehub.presentation.viewmodel.ScheduleViewModel
 
-/** As cinco áreas da barra de navegação inferior. */
 enum class ShellTab { INICIO, DOAR, PONTOS, CONTEUDO, EU }
 
 private val navItems = listOf(
@@ -36,13 +35,6 @@ private val navItems = listOf(
     BottomNavItem(icon = AppIcons.TabMe, label = "Eu"),
 )
 
-/**
- * Casca autenticada: mantém as cinco abas e a barra de navegação inferior.
- *
- * Os ViewModels e os estados de rolagem vivem aqui, e não em cada aba, para
- * que filtros e posição de lista sobrevivam ao ir e voltar — o mesmo efeito
- * que o `IndexedStack` produzia no projeto Flutter.
- */
 @Composable
 fun MainShellScreen(
     currentTab: ShellTab,
@@ -64,8 +56,6 @@ fun MainShellScreen(
     val contentListState = rememberLazyListState()
     val myAreaListState = rememberLazyListState()
 
-    // Revalida a aba que volta a ficar visível: uma coleta agendada ou
-    // confirmada em outra aba precisa aparecer aqui imediatamente.
     LaunchedEffect(currentTab) {
         when (currentTab) {
             ShellTab.INICIO -> homeViewModel.refresh()

@@ -2,7 +2,6 @@ package br.com.lactarehub.domain.entity
 
 import java.time.LocalDate
 
-/** Situação de uma doação dentro do fluxo do banco de leite. */
 enum class DonationStatus(val label: String) {
     EM_ANALISE("Em análise"),
     EM_ANDAMENTO("Em andamento"),
@@ -10,9 +9,7 @@ enum class DonationStatus(val label: String) {
     DISTRIBUIDA("Distribuída"),
 }
 
-/** Uma doação de leite humano, do recolhimento à entrega no hospital. */
 data class Donation(
-    /** Código de rastreio exibido para a doadora, ex.: `LCT-2104`. */
     val code: String,
     val collectedAt: LocalDate,
     val volumeMilliliters: Int,

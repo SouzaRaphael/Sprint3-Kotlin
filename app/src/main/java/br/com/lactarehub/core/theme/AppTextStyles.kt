@@ -8,20 +8,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
-/**
- * Família tipográfica do aplicativo.
- *
- * O projeto Flutter usava Plus Jakarta Sans via `google_fonts`. No Android o
- * equivalente seria o provedor de fontes do Google Play Services, que exige o
- * array de certificados `com_google_android_gms_fonts_certs` — não distribuído
- * por nenhuma dependência AndroidX atual. Como toda a identidade tipográfica do
- * design está nos pesos, tamanhos e espaçamentos definidos abaixo, usamos a
- * sans-serif do sistema: trocar esta constante por uma `FontFamily` de arquivos
- * `.ttf` em `res/font` é suficiente para recuperar a fonte original.
- */
 val LactareFontFamily: FontFamily = FontFamily.SansSerif
 
-/** Estilos tipográficos do Lactare. */
 object AppTextStyles {
 
     private fun family(
@@ -36,13 +24,11 @@ object AppTextStyles {
         fontSize = size.sp,
         fontWeight = weight,
         color = color,
-        // No Flutter `height` é um multiplicador do tamanho da fonte.
         lineHeight = height?.let { (size * it).sp } ?: TextUnit.Unspecified,
         letterSpacing = letterSpacing.sp,
         fontStyle = fontStyle,
     )
 
-    // ── Display — headline da landing ────────────────────────────
     val heroTitle = family(size = 34.0, weight = FontWeight.ExtraBold, height = 1.15, letterSpacing = -0.8)
 
     val heroTitleAccent = family(
@@ -54,7 +40,6 @@ object AppTextStyles {
         fontStyle = FontStyle.Italic,
     )
 
-    // ── Títulos ──────────────────────────────────────────────────
     val screenTitle = family(
         size = 24.0,
         weight = FontWeight.ExtraBold,
@@ -77,7 +62,6 @@ object AppTextStyles {
 
     val appBarTitle = family(size = 17.0, weight = FontWeight.ExtraBold, color = AppColors.PrimaryDark)
 
-    // ── Corpo ────────────────────────────────────────────────────
     val body = family(size = 15.0, weight = FontWeight.Medium, color = AppColors.InkMuted, height = 1.55)
 
     val bodySmall = family(size = 13.0, weight = FontWeight.Medium, color = AppColors.InkMuted, height = 1.5)
@@ -90,7 +74,6 @@ object AppTextStyles {
         fontStyle = FontStyle.Italic,
     )
 
-    // ── Números e estatísticas ───────────────────────────────────
     val statValue = family(size = 28.0, weight = FontWeight.ExtraBold, letterSpacing = -0.6)
 
     val statValueOnDark = family(
@@ -102,7 +85,6 @@ object AppTextStyles {
 
     val statLabel = family(size = 12.5, weight = FontWeight.Medium, color = AppColors.InkMuted, height = 1.4)
 
-    // ── Rótulos e componentes ────────────────────────────────────
     val label = family(size = 13.5, weight = FontWeight.Bold, color = AppColors.PrimaryDark)
 
     val overline = family(
@@ -135,10 +117,6 @@ object AppTextStyles {
     )
 }
 
-/**
- * Reaproveita um estilo mudando só o tamanho, preservando a proporção da
- * entrelinha — o equivalente ao `copyWith(fontSize: …)` do Flutter.
- */
 fun TextStyle.withSize(size: Double): TextStyle {
     val keepsRatio = lineHeight != TextUnit.Unspecified && fontSize != TextUnit.Unspecified
     return copy(

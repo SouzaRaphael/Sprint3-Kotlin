@@ -10,7 +10,6 @@ import br.com.lactarehub.domain.entity.CollectionPoint
 import br.com.lactarehub.domain.entity.CollectionPointType
 import kotlinx.coroutines.launch
 
-/** Estado do mapa de pontos de coleta. */
 class CollectionPointsViewModel : ViewModel() {
 
     var points by mutableStateOf<List<CollectionPoint>>(emptyList())
@@ -26,7 +25,6 @@ class CollectionPointsViewModel : ViewModel() {
     var isLoading by mutableStateOf(true)
         private set
 
-    /** Rótulos da barra de filtros: "Todos" seguido dos tipos. */
     val filterLabels: List<String>
         get() = listOf("Todos") + CollectionPointType.entries.map { it.label }
 
@@ -52,7 +50,6 @@ class CollectionPointsViewModel : ViewModel() {
             query = query,
         )
 
-        // Mantém a seleção só enquanto ela continuar visível no filtro atual.
         if (selected != null && selected !in points) selected = null
         if (selected == null) selected = points.firstOrNull()
     }

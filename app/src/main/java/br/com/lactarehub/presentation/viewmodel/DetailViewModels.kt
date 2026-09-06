@@ -15,7 +15,6 @@ import br.com.lactarehub.domain.entity.HowItWorksStep
 import br.com.lactarehub.domain.entity.ImpactStats
 import kotlinx.coroutines.launch
 
-/** Estado da home pública. */
 class LandingViewModel : ViewModel() {
 
     var stats by mutableStateOf<ImpactStats?>(null)
@@ -34,13 +33,6 @@ class LandingViewModel : ViewModel() {
     }
 }
 
-/**
- * Leitura de um artigo.
- *
- * O identificador chega pela rota — o equivalente ao `settings.arguments`
- * usado na navegação do projeto Flutter, agora com o artigo recuperado do
- * repositório em vez de trafegar pela pilha de navegação.
- */
 class ArticleDetailViewModel : ViewModel() {
 
     var article by mutableStateOf<Article?>(null)
@@ -56,14 +48,12 @@ class ArticleDetailViewModel : ViewModel() {
         viewModelScope.launch { article = ServiceLocator.getArticle(id) }
     }
 
-    /** Alterna o marcador de leitura e devolve o novo estado. */
     fun toggleSaved(): Boolean {
         isSaved = !isSaved
         return isSaved
     }
 }
 
-/** Detalhe de um ponto da rede. */
 class CollectionPointDetailViewModel : ViewModel() {
 
     var point by mutableStateOf<CollectionPoint?>(null)
@@ -78,7 +68,6 @@ class CollectionPointDetailViewModel : ViewModel() {
     }
 }
 
-/** Rastreamento completo de uma doação. */
 class DonationDetailViewModel : ViewModel() {
 
     var donation by mutableStateOf<Donation?>(null)
@@ -93,12 +82,6 @@ class DonationDetailViewModel : ViewModel() {
     }
 }
 
-/**
- * Perfil da doadora: dados do cadastro e a coleta agendada no momento.
- *
- * Carrega tudo ao abrir, então sempre reflete o último agendamento —
- * inclusive um acabado de registrar ou alterar.
- */
 class ProfileViewModel : ViewModel() {
 
     var donor by mutableStateOf<Donor?>(null)

@@ -29,7 +29,6 @@ import br.com.lactarehub.core.theme.AppTextStyles
 import br.com.lactarehub.core.theme.withSize
 import br.com.lactarehub.domain.entity.Article
 
-/** Card grande da aba Conteúdo: capa colorida, título, resumo e tempo. */
 @Composable
 fun ArticleCard(article: Article, onClick: (Article) -> Unit, modifier: Modifier = Modifier) {
     Column(
@@ -75,7 +74,6 @@ fun ArticleCard(article: Article, onClick: (Article) -> Unit, modifier: Modifier
     }
 }
 
-/** Card estreito do carrossel "Para ler nesta semana". */
 @Composable
 fun ArticleCarouselCard(
     article: Article,
@@ -125,7 +123,6 @@ fun ArticleCarouselCard(
     }
 }
 
-/** Linha compacta usada na lista de leituras da área da doadora. */
 @Composable
 fun ArticleListTile(article: Article, onClick: (Article) -> Unit, modifier: Modifier = Modifier) {
     Row(

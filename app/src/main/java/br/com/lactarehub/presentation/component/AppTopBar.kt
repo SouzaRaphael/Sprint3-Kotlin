@@ -22,15 +22,10 @@ import androidx.compose.ui.unit.dp
 import br.com.lactarehub.core.theme.AppColors
 import br.com.lactarehub.core.theme.AppTextStyles
 
-/**
- * Cabeçalho das telas internas: voltar em círculo claro, título centralizado
- * e um espaço opcional à direita.
- */
 @Composable
 fun AppTopBar(
     title: String,
     modifier: Modifier = Modifier,
-    /** Quando nulo, o botão de voltar não é exibido. */
     onBack: (() -> Unit)? = null,
     showDivider: Boolean = true,
     trailing: (@Composable () -> Unit)? = null,
@@ -77,7 +72,6 @@ fun AppTopBar(
     }
 }
 
-/** Botão redondo azul-claro usado no cabeçalho. */
 @Composable
 fun CircleIconButton(
     icon: androidx.compose.ui.graphics.vector.ImageVector,

@@ -44,7 +44,6 @@ import br.com.lactarehub.presentation.component.StatTile
 import br.com.lactarehub.presentation.component.TrackingTimeline
 import br.com.lactarehub.presentation.viewmodel.DonationDetailViewModel
 
-/** Rastreamento completo de uma doação. */
 @Composable
 fun DonationDetailScreen(
     donationCode: String,

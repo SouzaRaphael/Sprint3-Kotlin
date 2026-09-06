@@ -11,7 +11,6 @@ import br.com.lactarehub.domain.entity.TestCredential
 import br.com.lactarehub.domain.entity.UserSession
 import kotlinx.coroutines.launch
 
-/** Estado da tela de login. */
 class LoginViewModel : ViewModel() {
 
     var email by mutableStateOf("")
@@ -47,7 +46,6 @@ class LoginViewModel : ViewModel() {
         obscurePassword = !obscurePassword
     }
 
-    /** Preenche o formulário a partir da caixa de credenciais de teste. */
     fun fillWith(credential: TestCredential) {
         email = credential.email
         password = credential.password
@@ -55,7 +53,6 @@ class LoginViewModel : ViewModel() {
         passwordError = null
     }
 
-    /** Valida os campos como o `Form` do Flutter fazia antes de enviar. */
     private fun validate(): Boolean {
         val trimmed = email.trim()
         emailError = when {
@@ -67,7 +64,6 @@ class LoginViewModel : ViewModel() {
         return emailError == null && passwordError == null
     }
 
-    /** Autentica e chama [onResult] com o desfecho. */
     fun signIn(onResult: (success: Boolean) -> Unit) {
         if (!validate()) return
 

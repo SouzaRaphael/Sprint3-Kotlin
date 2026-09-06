@@ -34,7 +34,6 @@ import br.com.lactarehub.presentation.component.AppIcons
 import br.com.lactarehub.presentation.component.DotStatusLabel
 import br.com.lactarehub.presentation.component.PrimaryButton
 
-/** Folha inferior com o resumo do ponto selecionado no mapa. */
 @Composable
 fun PointPreviewCard(
     point: CollectionPoint,

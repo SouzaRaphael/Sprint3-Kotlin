@@ -42,11 +42,9 @@ import br.com.lactarehub.presentation.component.DonationBadge
 import br.com.lactarehub.presentation.component.HeroGradientBox
 import br.com.lactarehub.presentation.component.TrackingTimeline
 
-/** Card azul da jornada da doadora, no topo da área pessoal. */
 @Composable
 fun JourneyCard(
     donor: Donor,
-    /** Nula quando ainda não há coleta marcada. */
     schedule: CollectionSchedule?,
     modifier: Modifier = Modifier,
 ) {
@@ -89,7 +87,6 @@ fun JourneyCard(
     }
 }
 
-/** Caixa translúcida dentro do card azul. */
 @Composable
 private fun InnerStat(label: String, value: String, modifier: Modifier = Modifier) {
     Column(
@@ -109,15 +106,12 @@ private fun InnerStat(label: String, value: String, modifier: Modifier = Modifie
     }
 }
 
-/** Grade de medalhas da trilha da doadora. */
 @Composable
 fun AchievementsGrid(
     achievements: List<Achievement>,
     onClick: (Achievement) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // Grade fixa de três colunas, montada com linhas para conviver com a
-    // rolagem da tela — um `LazyVerticalGrid` aninhado exigiria altura fixa.
     Column(
         modifier = modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(AppSpacing.md),
@@ -214,7 +208,6 @@ private fun AchievementTile(
     }
 }
 
-/** Convite para indicar outra nutriz à rede. */
 @Composable
 fun ReferralCard(onInvite: () -> Unit, modifier: Modifier = Modifier) {
     Row(
@@ -265,7 +258,6 @@ fun ReferralCard(onInvite: () -> Unit, modifier: Modifier = Modifier) {
     }
 }
 
-/** Card branco com o código da doação e a linha do tempo resumida. */
 @Composable
 fun TrackingCard(donation: Donation, onClick: () -> Unit, modifier: Modifier = Modifier) {
     Column(

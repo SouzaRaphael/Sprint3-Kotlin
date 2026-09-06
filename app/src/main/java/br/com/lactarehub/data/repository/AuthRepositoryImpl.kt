@@ -10,13 +10,6 @@ import br.com.lactarehub.domain.entity.UserSession
 import br.com.lactarehub.domain.repository.AuthRepository
 import kotlinx.coroutines.delay
 
-/**
- * Autenticação sobre os dados mockados.
- *
- * É aqui que a sessão é aberta: entrar pelas credenciais de teste carrega a
- * persona de demonstração; concluir o cadastro carrega a pessoa que acabou
- * de se registrar.
- */
 class AuthRepositoryImpl : AuthRepository {
 
     override suspend fun signIn(email: String, password: String): UserSession {
@@ -66,7 +59,6 @@ class AuthRepositoryImpl : AuthRepository {
         }
 
     private companion object {
-        /** Latência simulada para que a interface exiba estados de carregamento. */
         const val LATENCY_MS = 700L
     }
 }

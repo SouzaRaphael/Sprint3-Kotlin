@@ -25,16 +25,12 @@ import br.com.lactarehub.core.theme.AppRadius
 import br.com.lactarehub.core.theme.AppSpacing
 import br.com.lactarehub.core.theme.AppTextStyles
 
-/** Tratamento visual do item selecionado. */
 enum class FilterChipStyle {
-    /** Fundo azul-claro e texto azul — usado na aba Conteúdo. */
     TINTED,
 
-    /** Fundo azul sólido e texto branco — usado no mapa. */
     SOLID,
 }
 
-/** Linha rolável de filtros em pílula. */
 @Composable
 fun FilterChipBar(
     labels: List<String>,
@@ -108,10 +104,6 @@ private fun FilterChipItem(
     }
 }
 
-/**
- * Controle segmentado dentro de uma faixa azul-clara — usado nos
- * depoimentos, onde os três filtros dividem um mesmo trilho.
- */
 @Composable
 fun SegmentedFilter(
     labels: List<String>,
